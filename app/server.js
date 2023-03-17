@@ -52,13 +52,11 @@ const server = http.createServer(async (req, res) => {
           ? { ...service, status: 'online' }
           : { ...service, status: 'offline' };
       } catch (error) {
-        errorMsg.get(error.cause.code) || error.cause.code;
-        const cause = error.cause;
         return {
           ...service,
           status: 'offline',
-          error: errorMsg,
-          cause,
+          error: errorMsg.get(error.cause.code) || error.cause.code,
+          cause: error.cause,
         };
       }
     })
