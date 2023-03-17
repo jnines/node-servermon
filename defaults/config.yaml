@@ -1,0 +1,13 @@
+# API key
+api:
+  - key: # Optional
+
+# Servers
+services:
+  - name: google
+    url: https://google.com
+    fa_icon: fa-brands fa-google
+
+  - name: github
+    url: https://github.com
+    fa_icon: fab fa-github

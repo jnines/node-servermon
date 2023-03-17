@@ -1,0 +1,22 @@
+{
+  "name": "node-servermon",
+  "version": "1.0.0",
+  "description": "Server Monitor in Nodejs",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_EXTRA_CA_CERTS=./.test/self-signed.pem node --watch ./app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnines/node-servermon"
+  },
+  "author": "Jason Mullenberg",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.6"
+  }
+}
