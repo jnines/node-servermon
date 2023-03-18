@@ -12,7 +12,7 @@ docker run -d \
 -e PUID=1000 \
 -e PGID=1000 \
 -e TZ=Etc/UTC \
--e SELFSIGNEDCERT=''
+-e SELFSIGNEDCERT='' \
 -p 3500:3500 \
 -v /path/to/config:/config \
 --restart unless-stopped \
@@ -27,7 +27,6 @@ services:
     container_name: nodeservermon
     image: ghcr.io/jnines/node-servermon
     environment:
-      NODE_ENV: production
       PUID: 1000
       PGID: 1000
       TZ: Etc/UTC
